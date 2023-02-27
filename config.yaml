@@ -15,7 +15,7 @@
 baseURL: /
 # 站点标题
 # Website title
-title: Hugo NexT
+title: alexar001230
 # 主题名称
 # Theme name
 theme: hugo-theme-next
@@ -95,7 +95,7 @@ outputFormats:
 # By default use local search, before switch to Algolia engine
 # Please replace LocalIndexes with AlgoliaIndexes
 outputs:
-  home: ["HTML", "RSS", "LocalIndexes"]
+  home: [ "HTML", "RSS", "LocalIndexes" ]
 
 # 输出 robots 文件支持爬虫扫描
 # Enable robots with support crawler scan
@@ -130,26 +130,27 @@ menus:
       pageref: /
       pre: home
       weight: 1
-    - identifier: about
-      name: 关于
-      pageref: /about.html
-      pre: user
-      weight: 2
     - identifier: flinks
-      name: 站点示例
+      name: 热点文章
       pageref: /flinks.html
       pre: thumbs-up
-      weight: 3
+      weight: 2
     - identifier: archives
       name: 归档
       pageref: /archives
       pre: archive
+      weight: 3
+    - identifier: about
+      name: 关于
+      pageref: /about.html
+      pre: user
       weight: 4
     - identifier: commonweal
       name: 公益 404
       url: /404.html
       pre: heartbeat
       weight: 5
+
 
 #-----------------------------------------
 # Hugo NexT 主题参数配置
@@ -159,7 +160,7 @@ params:
   # 需要显示文章的部分，即content目录下的文件夹名称
   # Sections for show in home & archive page 
   # and it's forlder name which under content
-  mainSections: ["post"]
+  mainSections: [ "post" ]
   # 年，月，日及时间的格式化样式
   # Format style for year,month,date & time
   yearFormat: "2006"
@@ -171,7 +172,7 @@ params:
   # Schemes
   #scheme: Muse
   #scheme: Mist
-  #scheme: Pisces
+  #  scheme: Pisces
   scheme: Gemini
 
   # 开启暗模式
@@ -181,9 +182,9 @@ params:
 
   # 站点基本信息
   # Site Information Settings
-  author: NexT 主题
-  subtitle: 为 Hugo 打造的主题
-  description: 保持简单的易用性和强大的功能。
+  author: alexar001230
+#  subtitle: 区委指示,往后的日子会越来越难
+  description: 区委指示,往后的日子会越来越难,坚持,坚持才能走向胜利！
   keywords: Hugo,NexT,主题,简单,强大
 
   # 不同尺寸站点图标
@@ -227,10 +228,10 @@ params:
   # Open graph settings
   openGraph:
     enable: true
-    #twitter:
-     #creator: <twitter:creator>
-     #image: <twitter:image>
-     #site: <twitter:site>
+      #twitter:
+      #creator: <twitter:creator>
+      #image: <twitter:image>
+    #site: <twitter:site>
     #googlePlus: <g+:profile_link>
     #facebook:
     #  admins: <fb:admin_id>
@@ -260,7 +261,7 @@ params:
     # Manual define the sidebar width. If commented, will be default for:
     # Muse | Mist: 320
     # Pisces | Gemini: 240
-    width: 256
+    width: 220
 
     # 侧边栏的显示方式，可选值：
     #  - post    默认在文章页面展开显示
@@ -287,20 +288,20 @@ params:
   avatar:
     # 设置显示头像的相对路径
     # Replace the default image and set the url here.
-    url: /imgs/hugo_next_avatar.png
+    url: /imgs/avatar.png
     # 开启头像的圆形显示效果
     # If true, the avatar will be displayed in circle.
     rounded: true
     # 开启头像随鼠标转动动画
     # If true, the avatar will be rotated with the cursor.
-    rotated: true
-  siteState: 
+    rotated: false
+  siteState:
     # 是否在侧边栏显示文章、分类、标签信息
     # Posts / Categories / Tags in sidebar.
     basic: true
     # 站点访问信息
     # Site information
-    statistic: 
+    statistic:
       enable: true
       # 组件类型，可选值为： 51la, busuanzi
       # 使用51la时需要注册账号：https://invite.51.la/1NUfGTS1?target=V6
@@ -314,7 +315,7 @@ params:
   # Usage: `Key: name || permalink || icon`
   # Key is the link label order.
   # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
-  socials: 
+  socials:
     social0: Github || https://github.com/elkan1788 || fab fa-github
     #social1: E-Mail || mailto:yourname@gmail.com || fa fa-envelope
     social2: 知乎 || https://www.zhihu.com/people/lisenhui || fa fa-book
@@ -357,9 +358,9 @@ params:
   # 用法： `Key: 显示名称 || 链接地址`
   # Links of your friends
   # Usage: `Key: name || permalink`
-  links: 
-    link0: Hugo-NexT || https://gitee.com/hugo-next/hugo-theme-next
-    link1: 凡梦星尘空间站 || https://lisenhui.cn
+  links:
+  #link0: Hugo-NexT || https://gitee.com/hugo-next/hugo-theme-next
+  #link1: 凡梦星尘空间站 || https://lisenhui.cn
 
   # 文章目录显示
   # Table of Contents in the Sidebar
@@ -439,12 +440,12 @@ params:
       # Vendors list, remember that who with logo image need put in top.
       list:
         - name: Vercel
-          image: 
+          image:
             url: /imgs/vendors/vercel.svg
             width: 50
           link: https://vercel.com
         - name: 又拍云
-          image: 
+          image:
             url: /imgs/vendors/upyun.png
             width: 43
           link: https://upyun.com
@@ -560,7 +561,7 @@ params:
 
   # 代码块的设置
   # Codeblock settings
-  codeblock:    
+  codeblock:
     # 支持样式类型： default | flat | mac
     # Available values: default | flat | mac
     style: mac
@@ -694,7 +695,7 @@ params:
 
   # 给所有外部链接添加新标签打开
   # Automatically add `target='_blank'` attribute in external URL.
-  exturl: 
+  exturl:
     enable: true
     # 给所有外部链接加上图标
     # If true, an icon will be attached to each external URL
@@ -779,7 +780,7 @@ params:
   comments:
     # 开启评论组件
     # If true, will show comment component in post end.
-    enable: false   
+    enable: false
     # 设置默认使用的评论插件
     # 可选值：livere | waline | utterances | artalk | giscus
     # Choose a comment system to be displayed by default.
@@ -818,9 +819,9 @@ params:
     emoji: false
     imgUploader: false
     wordLimit: 200
-    requiredMeta: ['nick', 'mail']
+    requiredMeta: [ 'nick', 'mail' ]
     reaction: true
-    reactionText: [ '点赞', '踩一下', '得意', '不屑', '尴尬', '睡觉']
+    reactionText: [ '点赞', '踩一下', '得意', '不屑', '尴尬', '睡觉' ]
     reactionTitle: "你认为这篇文章怎么样？"
     serverURL: #<your waline server url>
 
@@ -832,7 +833,7 @@ params:
   #   site: "默认站点"
   #   placeholder: "请文明发言，谢谢！"
   #   server: #<your artalk server url>
- 
+
   # Artalk 评论插件
   # 更多配置信息请参考：
   # LiveRe comments system
@@ -906,7 +907,7 @@ params:
   rating:
     enable: false
     id:     # <app_id>
-    color:  "#fc6423"
+    color: "#fc6423"
 
   # AddThis文章分享功能
   # 更多信息及配置请参考：https://www.addthis.com
@@ -1037,7 +1038,7 @@ params:
 
   # Mermaid tag
   mermaid:
-    enable: false
+    enable: true
     # Available themes: default | dark | forest | neutral
     theme:
       light: default
